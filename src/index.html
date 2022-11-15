@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slicing Netbook using Tailwind</title>
+
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="header" class="border-b-2 absolute w-full">
+        <div class="container flex justify-between py-6 lg:px-0 px-4">
+
+            <div class="menu-navigation flex gap-[70px]">
+                <div class="img-box flex items-center">
+                    <img src="img/logo.png" alt="logo">
+                </div>
+                <ul class="lg:flex hidden items-center gap-8">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li>
+                        <div class="item-dropdown flex gap-[5px]">
+                            <a href="#" class="mt-1">Community</a>
+                            <img src="icon/dropdown.svg" alt="dropdown">
+                        </div>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Event</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-action lg:flex hidden gap-[42px]">
+                <div class="search-box flex border-b-2 py-2">
+                    <img src="icon/search.svg" alt="search" class="w-1/2">
+                    <form action="">
+                        <input type="text" class="p-2 w-28 bg-transparent" placeholder="search here... ">
+                    </form>
+                </div>
+                <div class="button-box">
+                    <button class="bg-blue text-white py-4 px-11 rounded-2xl drop-shadow-xl">Log In</button>
+                </div>
+            </div>
+            <button class="navbar-burger space-y-2 lg:hidden mr-5">
+                <div class="w-8 h-0.5 bg-gray-600"></div>
+                <div class="w-8 h-0.5 bg-gray-600"></div>
+                <div class="w-8 h-0.5 bg-gray-600"></div>
+            </button>
+
+
+            <div class="navbar-menu relative z-50 hidden">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav class="fixed left-4 right-4 flex flex-col py-6 px-6 bg-white overflow-y-auto">
+                    <div class="flex items-end justify-end mb-8">
+                        <button class="navbar-close">
+                            <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                    href="#">Home</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                    href="#">
+                                    <div class="flex gap-[5px]">
+                                        Community
+                                        <img src="icon/dropdown.svg" alt="dropdown">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                    href="#">Blog</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                    href="#">Event</a>
+                            </li>
+                        </ul>
+                        <div class="button-box py-5 px-3">
+                            <button class="bg-blue text-white py-2 px-8 rounded-2xl drop-shadow-xl">Log In</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section id="hero">
+        <div class="container flex lg:flex-row flex-col items-center lg:px-0 px-4">
+            <div class="lg:w-1/2 w-full lg:mt-0 mt-5">
+                <span class="bg-blue bg-opacity-10 text-blue badge py-3 px-8 rounded-xl">Netbook Community</span>
+                <h1 class="font-bold lg:text-6xl text-4xl mt-5 text-darkblue">Your Solutions For Community!</h1>
+                <p class="text-lg mt-5 text-grey">More than 2 billion people in over countries use socibook to
+                    stay in touch with
+                    friends & family.</p>
+                <div class="button-box flex lg:justify-start justify-center mt-11">
+                    <button
+                        class="bg-blue text-white lg:py-4 py-2 lg:px-11 px-5 rounded-2xl mr-5 transition hover:-translate-y-1 hover:scale-110 hover:shadow-xl duration-150">About
+                        More</button>
+                    <button
+                        class="border-blue border-2 text-blue lg:py-4 py-2 lg:px-11 px-5 rounded-2xl transition hover:-translate-y-1 hover:bg-gradient-to-b from-white hover:scale-110 hover:shadow-xl duration-150">Invite
+                        Friend</button>
+                </div>
+            </div>
+            <div class="lg:w-1/2 w-full lg:mt-0 mt-10">
+                <img src="img/landing.png" alt="landing"
+                    class="lg:w-full w-80 lg:mr-0 mr-20 object-cover transition hover:rotate-[360deg] hover:scale-125 duration-300">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="why" class="pb-[34px]">
+        <div class="container flex lg:flex-row flex-col items-center lg:mt-32 mt-20 lg:px-0 px-4">
+            <div class="lg:w-1/2 w-full lg:mb-0 mb-8">
+                <p class="text-blue font-medium text-lg mb-[10px]">Whats Netbook?</p>
+                <h2 class="text-darkblue text-4xl font-bold mb-6">
+                    Why Join to Netbook Social Network?
+                </h2>
+                <p class="text-grey font-normal text-base mb-8">
+                    Recent surveys have indicated that small businesses recognise the need they have to connect with
+                    consumer.
+                </p>
+                <ul>
+                    <li>Group</li>
+                    <li>Messages</li>
+                    <li>Share</li>
+                </ul>
+            </div>
+            <div class="lg:w-1/2 w-full flex lg:flex-row flex-col items-center justify-end gap-7">
+                <img src="img/why1.png" alt="why1"
+                    class="sm:w-auto w-full transition hover:-translate-y-1 hover:scale-110 duration-300 lg:mb-0 mb-8">
+                <div class="lg:w-auto w-full flex flex-col gap-8">
+                    <img src="img/why2.png" alt="why2"
+                        class="w-full transition hover:-translate-y-1 hover:scale-110 duration-300">
+                    <img src="img/why3.png" alt="why3"
+                        class="w-full transition hover:-translate-y-1 hover:scale-110 duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievement" class="py-[75px]">
+        <div class="container flex lg:flex-row lg:gap-0 gap-[24px] flex-col-reverse items-center">
+
+            <!-- Content 1 -->
+            <div class="lg:w-8/12 w-full flex lg:flex-row flex-col gap-[24px] lg:px-0 px-4">
+                <!-- Card 1 -->
+                <div
+                    class="card lg:w-[336px] w-full transition duration-150 hover:shadow-2xl hover:-translate-y-1 border p-[44px] rounded-xl">
+                    <div class="flex gap-[13px]">
+                        <img src="icon/Star.svg" alt="Star">
+                        <p class="text-darkblue font-medium text-xl">4.8 Rating</p>
+                    </div>
+                    <div class="flex">
+                        <div class="">
+                            <img src="img/profpic1.png" alt="propil" class="absolute -ml-4 mt-7">
+                            <img src="img/profpic2.png" alt="propil" class="absolute z-10 mt-7">
+                            <img src="img/profpic3.png" alt="propil" class="absolute z-20 ml-4 mt-7">
+                        </div>
+                        <div>
+                            <p class="mt-[39px] font-medium text-base ml-[76px]"><span class="text-blue">+836k</span>
+                                Members</p>
+                        </div>
+                    </div>
+                    <p class="mt-[43px] mb-[40px] text-base text-lightgrey font-normal">More than 2 billion we people
+                        over
+                        countries use
+                        socibooks we to stay
+                        in touch
+                        with friends.</p>
+                    <a href="#" class="text-blue font-medium text-base flex">
+                        Join Our Community
+                        <span class="mt-2 ml-[8px]">
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5625 4H8.4375" stroke="#217BF4" stroke-width="1.2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M5.625 1.1875L8.4375 4L5.625 6.8125" stroke="#217BF4" stroke-width="1.2"
+                                    stroke-linecap="round" stroke-linejoin="round" /> </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="card bg-white lg:w-[336px] w-full transition duration-150 hover:shadow-2xl hover:-translate-y-1 border p-[44px] rounded-xl">
+                    <div class="flex gap-[13px]">
+                        <img src="icon/Trophy.svg" alt="Trophy">
+                        <p class="text-darkblue font-medium text-xl">Awwward</p>
+                    </div>
+                    <div class="flex">
+                        <img src="img/profpic-git.svg" alt="profpic-github" class="mt-[30px] -ml-3 object-cover">
+                        <p class="mt-[39px] font-medium text-base">Best of <span class="text-blue">2021</span> On Github
+                        </p>
+                    </div>
+                    <p class="mt-[30px] mb-[40px] text-base text-lightgrey font-normal">More than 2 billion we people
+                        over countries use socibooks we to stay in touch with friends.</p>
+                    <a href="#" class="text-dark font-medium text-base flex">
+                        Go To Awards
+                        <span class="mt-2 ml-[8px]">
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5625 4H8.4375" stroke="#4A4A56" stroke-width="1.2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M5.625 1.1875L8.4375 4L5.625 6.8125" stroke="#4A4A56" stroke-width="1.2"
+                                    stroke-linecap="round" stroke-linejoin="round" /> </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Content 2 -->
+            <div class="lg:w-4/12 w-full lg:px-0 px-4">
+                <p class="text-blue font-medium text-lg">Our Achievement</p>
+                <h3 class="text-darkblue text-4xl font-bold mt-[10px]">We are Connecting You The Digital Life.</h3>
+                <p class="mt-[18px] mb-[38px] text-base text-lightgrey font-normal">The scope the Social Media becomes
+                    crucial Is helps the business to directly engage with their needs
+                    and wants.</p>
+
+                <button
+                    class="bg-blue py-[22px] px-[38px] text-white font-medium text-sm rounded-[14px] transition hover:-translate-y-1 hover:scale-110 duration-150">
+                    <div class="flex gap-[29px]">Discover
+                        Me <img src="icon/arrow-right-white.svg" alt="arrow-right-white"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Comunity -->
+    <section id="community">
+        <div class="container flex flex-col justify-center">
+            <!-- Title Section -->
+            <div class="text-center">
+                <p class="text-blue font-medium text-lg">
+                    Our Community
+                </p>
+                <h3 class="text-darkblue font-bold text-4xl mt-[9px]">
+                    Community Main Feature
+                </h3>
+                <p class="text-grey font-nomal text-base mt-[19px] lg:mx-[380px]">
+                    The wise man therefore always holds in these matters to this principle of selection.
+                </p>
+            </div>
+
+            <div class="flex lg:flex-row flex-col justify-center gap-[44px] mt-[64px] lg:px-0 px-4">
+                <div class="flex flex-col gap-y-[44px]">
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="icon/member.png" alt="member">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">Members, Friends</h6>
+                            <p class="text-grey text-lg font-normal">Members, Friends Connection ( like followers ),
+                                Private Message</p>
+                        </div>
+                    </div>
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="icon/forum.png" alt="forum">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">Forum</h6>
+                            <p class="text-grey text-lg font-normal">Forum is ready by BBPress. Your users can make
+                                topics and talk.</p>
+                        </div>
+                    </div>
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="icon/list-builder.png" alt="list">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">List Builder</h6>
+                            <p class="text-grey text-lg font-normal">Members, Groups list can be modified by drag & drop
+                                live builder.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-y-[44px]">
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="icon/groups.png" alt="groups">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">Groups</h6>
+                            <p class="text-grey text-lg font-normal">Your users can create groups to let other users to
+                                join and talk</p>
+                        </div>
+                    </div>
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="icon/module.png" alt="module">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">Custom Modul</h6>
+                            <p class="text-grey text-lg font-normal">You can create Members, Groups Module. We already
+                                created 3 modules. It's by drag & drop
+                                live
+                                builder.</p>
+                        </div>
+                    </div>
+                    <div class="card flex lg:flex-row flex-col items-start lg:w-[522px] w-full lg:h-[182px] pb-[30px]">
+                        <img src="icon/list-scroll.png" alt="list">
+                        <div class="content pt-2">
+                            <h6 class="text-darkblue2 font-semibold text-2xl mb-[3px]">List Scroll Effects</h6>
+                            <p class="text-grey text-lg font-normal">8 different scroll effects are ready.
+                                You can always change by your tastes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function () {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
