@@ -65,15 +65,15 @@
         </div>
     </nav> -->
 
-    <nav id="header" class="border-b-2 absolute w-full">
-        <div class="container flex flex-wrap justify-between py-6 lg:px-0 px-4 gap-5">
+    <nav id="header" class="border-b-2 lg:absolute fixed w-full lg:bg-transparent bg-white">
+        <div class="container flex lg:flex-nowrap flex-wrap justify-between py-6 lg:px-0 px-4 gap-5">
             <div class="img-box flex items-center mr-[72px]">
                 <img src="img/logo.png" alt="logo">
             </div>
 
             <!-- Button Hamburger -->
             <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -84,12 +84,12 @@
                 </svg>
             </button>
 
-            <div id="navbar-default" class="hidden lg:block lg:bg-transparent bg-white w-full">
-                <div class="flex lg:flex-row flex-col items-center justify-between">
+            <div id="navbar-default" class="hidden lg:block lg:bg-transparent lg:py-0 py-5 bg-white w-full">
+                <div class="flex md:flex-row flex-col lg:items-center items-start justify-between lg:p-0 p-5">
                     <!-- Left -->
                     <div class=" menu-navigation flex gap-[70px]">
-                        <ul class="flex lg:flex-row flex-col items-center lg:gap-8 gap-4">
-                            <li><a href="#" class="active">Home</a></li>
+                        <ul class="flex md:flex-row flex-col lg:items-center items-start lg:gap-8 gap-4">
+                            <li><a href=" #" class="active">Home</a></li>
                             <li>
                                 <div class="item-dropdown flex gap-[5px]">
                                     <a href="#" class="mt-1">Community</a>
@@ -102,7 +102,7 @@
                     </div>
 
                     <!-- Right -->
-                    <div class="menu-action flex lg:flex-row flex-col gap-[42px]">
+                    <div class="menu-action flex md:flex-row flex-col gap-[42px]">
                         <div class="search-box flex border-b-2 py-2 lg:mt-0 mt-10">
                             <img src="icon/search.svg" alt="search" class="w-1/2">
                             <form action="">
@@ -560,10 +560,11 @@
     </section>
 
 
-    <footer class="bg-[#2B2B39] text-white pt-[78px]">
-        <div class="container flex mb-[85px]">
-            <div class="w-9/12 flex justify-between pr-[163px]">
-                <div class="home">
+    <footer class="bg-[#2B2B39] text-white pt-[78px]" id="footer">
+        <div class="container flex lg:flex-row flex-col mb-[85px] lg:px-0 px-8 gap-10">
+            <div
+                class="lg:w-9/12 w-full flex lg:flex-no-wrap flex-wrap lg:justify-between justify-start lg:pr-[163px] lg:gap-0 gap-20">
+                <div class="home lg:mr-0 mr-4">
                     <p class="mb-[22px] text-xl">Home</p>
                     <ul>
                         <li>Home</li>
@@ -600,29 +601,37 @@
                     </ul>
                 </div>
             </div>
-            <div class="w-3/12">
-                <p class="text-xl mr-[130px] mb-[18px]">
+            <div class="lg:w-3/12 w-full">
+                <p class="text-xl lg:mr-[130px] mb-[18px]">
                     Subscribe Cirkle Newsletter
                 </p>
                 <span class="font-normal text-base text-[#E7E7E7]">
                     Subscribe to be the first one to know about updates. Enter your email
-                    Email Address Subscribe
                 </span>
+                <form action="" class="flex w-full mt-[32px]">
+                    <input type="text" placeholder="Email Address"
+                        class="bg-transparent rounded-l-[12px] border-2 px-[24px] border-white text-base font-medium lg:w-80 w-60">
+                    <button type="submit"
+                        class="bg-white py-[16px] px-[24px] -ml-14 text-[#2B2B39] rounded-[12px] text-base font-medium">Subscribe</button>
+                </form>
             </div>
         </div>
 
         <div class="bottom bg-[#20202D] py-[31px]">
-            <div class="container flex justify-between items-center">
+            <div
+                class="container flex lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center lg:gap-0 gap-8 lg:px-0 px-4">
                 <p>Besnik Creative Agency.</p>
-                <img src="img/logo.png" alt="logo">
-                <img src="img/sosmed.png" alt="sosmed">
+                <div class="lg:w-1/2 w-full flex justify-between">
+                    <img src="img/logo-dark.png" alt="logo" class="h-[30px]">
+                    <img src="img/sosmed.png" alt="sosmed" class="h-[30px]">
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="/node_modules/flowbite/dist/flowbite.js"></script>
 
-    <script>
+    <!-- <script>
         // Burger menus
         document.addEventListener('DOMContentLoaded', function () {
             // open
@@ -663,7 +672,7 @@
                 }
             }
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
